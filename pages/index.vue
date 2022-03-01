@@ -1,16 +1,11 @@
 <template>
-  <div>
-    <Navbar />
-    <h1 class="text-red-500">Test</h1>
-  </div>
+  <Navbar />
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
 import Navbar from '~/components/Navbar.vue'
-
-export default Vue.extend({
+export default {
   name: 'IndexPage',
   components: { Navbar },
-})
+}
 </script>
