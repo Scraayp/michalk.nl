@@ -96,19 +96,19 @@
       {
         "title": "Discord Anti Spam",
         "category": "A NPM package for discord.js to prevent spam in your server",
-        "image": "canadian-wanderlust.jpg",
+        "image": "discord-mod.png",
         "url": "https://github.com/Michael-J-Scofield/discord-anti-spam"
       },
       {
         "title": "BHC Shop",
         "category": "(discontinued) A website for my schools shop.",
-        "image": "fury-fighting-gear.jpg",
+        "image": "bhcshop.png",
         "url": "https://github.com/scraayp/bhcshop"
       },
       {
         "title": "Hez",
         "category": "(currently private) A multipurpose discord bot for your server.",
-        "image": "hez.jpg",
+        "image": "discord-bot.png",
         "url": "https://github.com/scraayp/hez-bot"
       }
     ]
