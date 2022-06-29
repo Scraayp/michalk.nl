@@ -745,3 +745,24 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+/* Contact page */
+.contact-header {
+  padding-top: 80px !important;
+}
+
+.contact-section {
+  position: relative;
+  z-index: -1;
+  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 30px !important;
+  padding-top: 30px !important;
+}
+
+.contact-content {
+  padding: 9rem 0 2rem !important;
+  color: whitesmoke;
+  text-align: left;
+}
