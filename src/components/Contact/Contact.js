@@ -11,10 +11,10 @@ function Home() {
           <Row>
             <Col md={7} className="home-header">
               <h1 className="heading">
-                Hi there.<br /> Here is the contact form: 
+                Hi there.
+                <br /> Here is the contact form:
               </h1>
             </Col>
-            y
           </Row>
         </Container>
       </Container>
