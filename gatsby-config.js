@@ -7,7 +7,6 @@ module.exports = {
     siteUrl: `https://www.michalk.nl`,
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-postcss",
     {
       resolve: "gatsby-plugin-google-analytics",
@@ -16,13 +15,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-image",
-    "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
-    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
