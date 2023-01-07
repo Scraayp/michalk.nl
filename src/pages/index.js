@@ -10,6 +10,10 @@ const IndexPage = () => {
       <div className="construction">
         <h1>Website Under Construction</h1>
         <h2>Soon!</h2>
+        <br></br>
+        <p>
+          <a href="mailto:hello@michalk.nl">&copy; Michal - 2023</a>
+        </p>
       </div>
       <div id="outerCraneContainer">
         <div className="buildings">
