@@ -7,7 +7,7 @@
 
 /* Media screen phone, set NAVCLOSED to display none */
 
-@media (max-width: 640px) {
+@media (max-width: 1025px) {
 	.NAVCLOSED {
 		display: none;
 	}

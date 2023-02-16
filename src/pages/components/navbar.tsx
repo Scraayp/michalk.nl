@@ -131,7 +131,7 @@ export default function Navbar() {
 							<line x1="6" y1="6" x2="18" y2="18" />
 						</svg>
 					</div>
-					<ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between">
+					<ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between md:mt-nav-md-mt">
 						<li className="border-b border-gray-400 my-8 uppercase">
 							<a href="/about">About</a>
 						</li>
@@ -142,7 +142,7 @@ export default function Navbar() {
 							<a href="/contact">Contact</a>
 						</li>
 					</ul>
-					<ul className="flex flex-row justify-center ml-auto mr-auto">
+					<ul className="flex flex-row ml-auto mr-auto justify-center">
 						<li className="">
 							<Link href="https://discord.com">
 								<FontAwesomeIcon

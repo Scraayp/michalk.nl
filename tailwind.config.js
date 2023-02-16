@@ -8,22 +8,23 @@ module.exports = {
 		// Or if using `src` directory:
 		"./src/**/*.{js,ts,jsx,tsx}",
 	],
-	darkMode: 'class',
+	darkMode: "class",
 	theme: {
 		extend: {
 			colors: {
 				darkbg: "#111827",
 				navdivider: "#525259",
 				navtext: "#d9e6eb",
-				navhover: "#59d8ff"
+				navhover: "#59d8ff",
 			},
 			fontFamily: {
-				"inter": ["Inter", "sans-serif"]
+				inter: ["Inter", "sans-serif"],
 			},
 			margin: {
 				"nav-height": "20px",
 				"nav-text-height": "34px",
-			}
+				"nav-md-mt": "200px",
+			},
 		},
 	},
 	plugins: [],
