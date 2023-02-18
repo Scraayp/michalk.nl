@@ -16,6 +16,8 @@ module.exports = {
 				navdivider: "#525259",
 				navtext: "#d9e6eb",
 				navhover: "#59d8ff",
+				maincolor: "#59d8ff",
+				maincolorhover: "#208aab",
 			},
 			fontFamily: {
 				inter: ["Inter", "sans-serif"],
@@ -24,6 +26,7 @@ module.exports = {
 				"nav-height": "20px",
 				"nav-text-height": "34px",
 				"nav-md-mt": "200px",
+				"error-mt": "100px",
 			},
 		},
 	},
