@@ -5,10 +5,16 @@
 /* Import inter font */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
+footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
 /* Media screen phone, set NAVCLOSED to display none */
 
 @media (max-width: 1025px) {
-	.NAVCLOSED {
-		display: none;
-	}
+  .NAVCLOSED {
+    display: none;
+  }
 }

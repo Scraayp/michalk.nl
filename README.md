@@ -36,6 +36,7 @@ yarn dev
 ```
 
 ## Lint
+
 ```properties
 yarn lint
 ```
@@ -44,13 +45,13 @@ yarn lint
 
 👤 **Michal (Scraayp) <hello@michalk.nl>**
 
-* Website: https://michalk.nl
-* Twitter: [@Scraayp](https://twitter.com/Scraayp)
-* Github: [@Scraayp](https://github.com/Scraayp)
+- Website: https://michalk.nl
+- Twitter: [@Scraayp](https://twitter.com/Scraayp)
+- Github: [@Scraayp](https://github.com/Scraayp)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Scraayp/michalk.nl/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Scraayp/michalk.nl/issues).
 
 ## Show your support
 
@@ -61,4 +62,4 @@ Give a ⭐️ if this project helped you!
 Copyright © 2023 [Michal](https://github.com/Scraayp) [<hello@michalk.nl>](mailto:hello@michalk.nl).<br />
 This project is [MIT](https://raw.githubusercontent.com/Scraayp/michalk.nl/stable/LICENSE) licensed.
 
-***
+---

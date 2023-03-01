@@ -1,34 +1,34 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [
-		"./app/**/*.{js,ts,jsx,tsx}",
-		"./pages/**/*.{js,ts,jsx,tsx}",
-		"./components/**/*.{js,ts,jsx,tsx}",
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
 
-		// Or if using `src` directory:
-		"./src/**/*.{js,ts,jsx,tsx}",
-	],
-	darkMode: "class",
-	theme: {
-		extend: {
-			colors: {
-				darkbg: "#111827",
-				navdivider: "#525259",
-				navtext: "#d9e6eb",
-				navhover: "#59d8ff",
-				maincolor: "#59d8ff",
-				maincolorhover: "#208aab",
-			},
-			fontFamily: {
-				inter: ["Inter", "sans-serif"],
-			},
-			margin: {
-				"nav-height": "20px",
-				"nav-text-height": "34px",
-				"nav-md-mt": "200px",
-				"error-mt": "100px",
-			},
-		},
-	},
-	plugins: [],
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        darkbg: "#111827",
+        navdivider: "#525259",
+        navtext: "#d9e6eb",
+        navhover: "#59d8ff",
+        maincolor: "#59d8ff",
+        maincolorhover: "#208aab",
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
+      margin: {
+        "nav-height": "20px",
+        "nav-text-height": "34px",
+        "nav-md-mt": "200px",
+        "error-mt": "100px",
+      },
+    },
+  },
+  plugins: [],
 };
