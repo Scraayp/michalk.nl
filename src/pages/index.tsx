@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Michal | Software Developer.</title>
+        <title>Michal | Software Developer</title>
         <meta
           name="description"
           content="Homepage | Michal, Software Developer"

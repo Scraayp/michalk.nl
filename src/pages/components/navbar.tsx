@@ -67,8 +67,8 @@ export default function Navbar() {
         className="ml-4 border-2 border-navdivider opacity-25 h-12 mt-nav-height NAVCLOSED"
       ></div>
       <div id="socialIcons" className="NAVCLOSED">
-        <ul className="flex flex-row">
-          <li className="text-navtext font-bold mt-nav-text-height">
+        <ul className="flex flex-row hover:drop-shadow-[0_35px_35px_rgba(89, 216, 255)]">
+          <li className="text-navtext font-bold mt-nav-text-height hover:drop-shadow-[0_35px_35px_rgba(89, 216, 255)]">
             <Link href="https://discord.com">
               <FontAwesomeIcon icon={faDiscord} size="1x" className="ml-3" />
             </Link>
@@ -126,19 +126,19 @@ export default function Navbar() {
               <a href="/contact">Contact</a>
             </li>
           </ul>
-          <ul className="flex flex-row ml-auto mr-auto justify-center">
-            <li className="">
+          <ul className="flex flex-row ml-auto mr-auto justify-center hover:drop-shadow-[0_35px_35px_rgba(89, 216, 255)]">
+            <li className="hover:drop-shadow-[0_35px_35px_rgba(89, 216, 255)]">
               <Link href="https://discord.com">
                 <FontAwesomeIcon icon={faDiscord} size="2x" className="ml-3" />
               </Link>
             </li>
             <li className="ml-3">
-              <Link href="https://twitter.com">
+              <Link href="https://twitter.com" className="nav-social-icons">
                 <FontAwesomeIcon icon={faTwitter} size="2x" className="ml-3" />
               </Link>
             </li>
             <li className="ml-3">
-              <Link href="https://github.com">
+              <Link href="https://github.com" className="nav-social-icons">
                 <FontAwesomeIcon icon={faGithub} size="2x" className="ml-3" />
               </Link>
             </li>
