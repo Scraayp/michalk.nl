@@ -1,34 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: "class",
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
       colors: {
-        darkbg: "#111827",
-        navdivider: "#525259",
-        navtext: "#d9e6eb",
-        navhover: "#59d8ff",
-        maincolor: "#59d8ff",
-        maincolorhover: "#208aab",
-      },
-      fontFamily: {
-        inter: ["Inter", "sans-serif"],
-      },
-      margin: {
-        "nav-height": "20px",
-        "nav-text-height": "34px",
-        "nav-md-mt": "200px",
-        "error-mt": "100px",
-      },
+        primary: '#31C1FF'
+      }
     },
   },
   plugins: [],
-};
+}
