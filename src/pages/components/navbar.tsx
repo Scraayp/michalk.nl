@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { useState } from "react";
+import { FaTwitter, FaDiscord, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,6 +43,30 @@ export default function Navbar() {
               href="#contact"
             >
               Contact
+            </Link>
+            <Link
+              className="mr-5 text-xl text-black dark:text-white hover:text-primary"
+              href="https://github.com/scraayp"
+            >
+              <FaGithub />
+            </Link>
+            <Link
+              className="mr-5 text-xl text-black dark:text-white hover:text-primary"
+              href="https://linkedin.com/michkolasa"
+            >
+              <FaLinkedin />
+            </Link>
+            <Link
+              className="mr-5 text-xl text-black dark:text-white hover:text-primary"
+              href="https://discord.com/"
+            >
+              <FaDiscord />
+            </Link>
+            <Link
+              className="mr-5 text-xl text-black dark:text-white hover:text-primary"
+              href="https://twitter.com/scraayp"
+            >
+              <FaTwitter />
             </Link>
           </nav>
         </div>
