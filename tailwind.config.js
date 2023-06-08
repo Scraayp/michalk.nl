@@ -11,6 +11,9 @@ module.exports = {
         darkbg: '#1F2029',
         lightbg: '#fff',
         primary: '#31C1FF'
+      },
+      width: {
+        'head': '76%',
       }
     },
   },
