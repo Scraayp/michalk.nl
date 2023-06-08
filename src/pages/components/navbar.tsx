@@ -47,24 +47,28 @@ export default function Navbar() {
             <Link
               className="mr-5 text-xl text-black dark:text-white hover:text-primary"
               href="https://github.com/scraayp"
+              target="_blank"
             >
               <FaGithub />
             </Link>
             <Link
               className="mr-5 text-xl text-black dark:text-white hover:text-primary"
-              href="https://linkedin.com/michkolasa"
+              href="https://www.linkedin.com/in/michkolasa/"
+              target="_blank"
             >
               <FaLinkedin />
             </Link>
             <Link
               className="mr-5 text-xl text-black dark:text-white hover:text-primary"
-              href="https://discord.com/"
+              href="https://discord.gg/bWsYCZNKaU"
+              target="_blank"
             >
               <FaDiscord />
             </Link>
             <Link
               className="mr-5 text-xl text-black dark:text-white hover:text-primary"
               href="https://twitter.com/scraayp"
+              target="_blank"
             >
               <FaTwitter />
             </Link>
