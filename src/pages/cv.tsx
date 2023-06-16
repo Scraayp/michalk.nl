@@ -14,7 +14,7 @@ export default function Home() {
           id="pdf-embed"
           type="application/pdf"
           width="100%"
-          height="600px"
+          height="800px"
           src="/cv.pdf"
         />
       </div>
