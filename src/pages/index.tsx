@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Navbar from "./components/navbar";
 import Image from "next/image";
+import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -61,6 +62,7 @@ export default function Home() {
           referee and a trainer at my local club.
         </p>
       </div>
+      <Footer />
     </main>
   );
 }
