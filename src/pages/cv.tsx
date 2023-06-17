@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import Navbar from "./components/navbar";
 import Image from "next/image";
 import React from "react";
+import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function Home() {
           src="/cv.pdf"
         />
       </div>
+      <Footer />
     </main>
   );
 }
