@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 import Image from "next/image";
 import Footer from "./components/footer";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -66,42 +67,90 @@ export default function Home() {
         <h1 className="text-left text-4xl font-bold text-primary block">
           Projects
         </h1>
-        <div className="project mt-10">
-          <a
-            href="./api/redirect/portfolio"
-            className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-          >
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Personal Portfolio
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              My first personal portfolio website.
-            </p>
-            <span className="text-gray-400 text-sm italic">
-              Technologies used:
-            </span>
-            <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
-              <span className="flex w-2.5 h-2.5 bg-primary rounded-full mr-1.5 flex-shrink-0"></span>
-              Next.js
-              <span className="flex w-2.5 h-2.5 bg-primary rounded-full ml-3 mr-1.5 flex-shrink-0"></span>
-              Tailwind
-              <span className="flex w-2.5 h-2.5 bg-primary rounded-full ml-3 mr-1.5 flex-shrink-0"></span>
-              Figma
-            </span>
-            <span className="text-gray-400 text-sm italic">Github:</span>
-            <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
-              <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
-              <a
-                href="https://github.com/Scraayp/michalk.nl"
-                className="hover:underline hover:text-primary"
-              >
-                Repository
-              </a>
-              <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full ml-3 mr-1.5 flex-shrink-0"></span>
-              {starsCount !== null && <p>Stars: {starsCount}</p>}
-            </span>
-          </a>
+        <div className="flex flex-row space-x-4">
+          <div className="project mt-10">
+            <Link
+              href="./api/redirect/portfolio"
+              className="block max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+            >
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Personal Portfolio
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                My first personal portfolio website.
+              </p>
+              <span className="text-gray-400 text-sm italic">
+                Technologies used:
+              </span>
+              <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <span className="flex w-2.5 h-2.5 bg-primary rounded-full mr-1.5 flex-shrink-0"></span>
+                Next.js
+                <span className="flex w-2.5 h-2.5 bg-primary rounded-full ml-3 mr-1.5 flex-shrink-0"></span>
+                Tailwind
+                <span className="flex w-2.5 h-2.5 bg-primary rounded-full ml-3 mr-1.5 flex-shrink-0"></span>
+                Figma
+              </span>
+              <span className="text-gray-400 text-sm italic">
+                Languages used:
+              </span>
+              <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <span className="flex w-2.5 h-2.5 bg-primary rounded-full mr-1.5 flex-shrink-0"></span>
+                Typescript
+              </span>
+              <span className="text-gray-400 text-sm italic">Github:</span>
+              {/* <div className="hover:underline hover:text-primary flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <a href="https://github.com/Scraayp/michalk.nl">
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Repository
+                </a>
+              </div> */}
+            </Link>
+          </div>
+          <div className="project mt-10">
+            <Link
+              href="./api/redirect/discordantispam"
+              className="block max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+            >
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Discord Anti Spam
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                A simple module with quick setup and different options to
+                implement anti-spam features in your bot.
+              </p>
+              <span className="text-gray-400 text-sm italic">
+                Technologies used:
+              </span>
+              <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <span className="flex w-2.5 h-2.5 bg-primary rounded-full mr-1.5 flex-shrink-0"></span>
+                NPM Modules
+                <span className="flex w-2.5 h-2.5 bg-primary rounded-full ml-3 mr-1.5 flex-shrink-0"></span>
+                Open Source Contributing
+              </span>
+              <span className="text-gray-400 text-sm italic">
+                Languages used:
+              </span>
+              <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <span className="flex w-2.5 h-2.5 bg-primary rounded-full mr-1.5 flex-shrink-0"></span>
+                Javascript
+                <span className="flex w-2.5 h-2.5 bg-primary rounded-full ml-3 mr-1.5 flex-shrink-0"></span>
+                Typescript
+              </span>
+              <span className="text-gray-400 text-sm italic">Github:</span>
+              <div className="hover:underline hover:text-primary flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <a href="https://github.com/Scraayp/michalk.nl">
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Repository
+                </a>
+              </div>
+            </Link>
+          </div>
         </div>
+      </div>
+      <div id="contact" className="m-auto w-head mt-96 mb-40">
+        <h1 className="text-left text-4xl font-bold text-primary block">
+          Contact
+        </h1>
       </div>
       <Footer />
     </main>
