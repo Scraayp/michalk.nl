@@ -47,13 +47,13 @@ export default function Home() {
           referee and a trainer at my local club.
         </p>
         <br />
-        <a href="/cv">
+        <Link href="/cv">
           <button className="relative mt-5 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
             <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-darkbg7 rounded-md group-hover:bg-opacity-0">
               CV<i className="fa-solid fa-file pl-3"></i>
             </span>
           </button>
-        </a>
+        </Link>
 
         <Image
           src={"/me.jpg"}
@@ -138,10 +138,10 @@ export default function Home() {
               </span>
               <span className="text-gray-400 text-sm italic">Github:</span>
               <div className="hover:underline hover:text-primary flex items-center text-sm font-medium text-gray-900 dark:text-white">
-                <a href="https://github.com/Scraayp/michalk.nl">
+                <Link href="https://github.com/Scraayp/michalk.nl">
                   <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
                   Repository
-                </a>
+                </Link>
               </div>
             </Link>
           </div>
