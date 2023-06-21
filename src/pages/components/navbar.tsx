@@ -2,126 +2,87 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { useState } from "react";
-import { FaTwitter, FaDiscord, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <header className="text-black dark:text-white font-bold">
-      <div className="DESKTOPNAV space-x-8 hidden lg:flex">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <Link
-            className="flex title-font font-medium items-center text-black dark:text-white hover:text-primary mb-4 md:mb-0"
-            href="../"
+    <nav className=" border-gray-200 dark:border-gray-700">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <Link href="./" className="flex items-center">
+          <img
+            src="./logo.png"
+            className="h-8 mr-3 rounded-full"
+            alt="Michal's logo"
+          />
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            Michal
+          </span>
+        </Link>
+        <button
+          data-collapse-toggle="navbar-multi-level"
+          type="button"
+          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-multi-level"
+          aria-expanded="false"
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <Image
-              src="/logo.png"
-              width={50}
-              height={50}
-              alt="logo"
-              className="rounded-full"
-            />
-            <span className="font-bold ml-3 text-xl">Michal</span>
-          </Link>
-          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <Link
-              className="mr-5 text-xl text-black dark:text-white hover:text-primary"
-              href="#about"
-            >
-              About
-            </Link>
-            <Link
-              className="mr-5 text-xl text-black dark:text-white hover:text-primary"
-              href="#projects"
-            >
-              Portfolio
-            </Link>
-            <Link
-              className="mr-5 text-xl text-black dark:text-white hover:text-primary"
-              href="#contact"
-            >
-              Contact
-            </Link>
-            <Link
-              className="mr-5 text-xl text-black dark:text-white hover:text-primary"
-              href="https://github.com/scraayp"
-              target="_blank"
-            >
-              <FaGithub />
-            </Link>
-            <Link
-              className="mr-5 text-xl text-black dark:text-white hover:text-primary"
-              href="https://www.linkedin.com/in/michkolasa/"
-              target="_blank"
-            >
-              <FaLinkedin />
-            </Link>
-            <Link
-              className="mr-5 text-xl text-black dark:text-white hover:text-primary"
-              href="https://discord.gg/bWsYCZNKaU"
-              target="_blank"
-            >
-              <FaDiscord />
-            </Link>
-            <Link
-              className="mr-5 text-xl text-black dark:text-white hover:text-primary"
-              href="https://twitter.com/scraayp"
-              target="_blank"
-            >
-              <FaTwitter />
-            </Link>
-          </nav>
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div
+          className="hidden w-full md:block md:w-auto"
+          id="navbar-multi-level"
+        >
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:border-gray-700">
+            <li>
+              <Link
+                href="./"
+                className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 hover:text-primary text-black dark:text-white font-semibold"
+                aria-current="page"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#about"
+                className="block py-2 pl-3 pr-4 rounded  md:border-0 hover:text-primary md:p-0 dark:text-white  text-black font-semibold"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#projects"
+                className="block py-2 pl-3 pr-4 md:border-0 hover:text-primary md:p-0 dark:text-white text-black font-semibold"
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#contact"
+                className="block py-2 pl-3 pr-4 rounded  md:border-0 hover:text-primary md:p-0 dark:text-white  text-black font-semibold"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
-      <div id="mobilenav">
-        <section className="MOBILE-MENU flex lg:hidden">
-          <div
-            className={isNavOpen ? "hidden" : "w-full grid justify-end mr-4"}
-          >
-            <div
-              className="HAMBURGER-ICON space-y-2 mt-8 ml-8 right-0 w-full"
-              onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
-            >
-              <span className="block h-0.5 w-8 animate-pulse bg-black dark:bg-white"></span>
-              <span className="block h-0.5 w-8 animate-pulse bg-black dark:bg-white"></span>
-              <span className="block h-0.5 w-8 animate-pulse bg-black dark:bg-white"></span>
-            </div>
-          </div>
-
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
-            <div
-              className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
-              onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
-            >
-              <svg
-                className="h-8 w-8 text-black dark:text-white"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </div>
-            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
-              <li className="border-b border-primary my-8 uppercase">
-                <a href="/about">About</a>
-              </li>
-              <li className="border-b border-primary my-8 uppercase">
-                <a href="/portfolio">Portfolio</a>
-              </li>
-              <li className="border-b border-primary my-8 uppercase">
-                <a href="/contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </header>
+    </nav>
   );
 }
