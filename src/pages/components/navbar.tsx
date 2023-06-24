@@ -1,14 +1,9 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Link from "next/link";
 import { useState } from "react";
-import Head from "next/head";
 import { Navbar } from "flowbite-react";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function navbar() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <Navbar fluid={true} rounded={true}>
       <Navbar.Brand href="https://michalk.nl" className="mt-4 ml-4">
