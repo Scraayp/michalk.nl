@@ -12,7 +12,7 @@ export default function navbar() {
   return (
     <Navbar fluid={true} rounded={true}>
       <Navbar.Brand href="https://michalk.nl" className="mt-4 ml-4">
-        <img
+        <Image
           src="./logo.png"
           className="mr-3 h-8 sm:h-9 rounded-full"
           alt="Scraayp's Logo"
