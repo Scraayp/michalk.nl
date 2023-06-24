@@ -227,6 +227,7 @@ export default function Home() {
             </form>
           </div>
           <div id="contactsocial">
+            <h1 className="text-primary font-bold text-3xl hidden md:block">My Social Media</h1>
             <div
               id="mobile"
               className="flex flex-row justify-center mt-10 text-white md:hidden"
