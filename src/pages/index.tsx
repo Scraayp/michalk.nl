@@ -6,7 +6,6 @@ import Link from "next/link";
 import Script from "next/script";
 
 export default function Home() {
-
   return (
     <main>
       <NavbarComp />
@@ -135,7 +134,7 @@ export default function Home() {
           <div id="formcontact">
             <form
               className="mt-10"
-              action="https://send.pageclip.co/azcmdAiGz3zpcFLkoMStgQZlZk8UFkj0/michalk-forms-contact"
+              action="https://send.pageclip.co/azcmdAiGz3zpcFLkoMStgQZlZk8UFkj0/contact-form"
               method="POST"
             >
               <div className="relative z-0 w-80 mb-6 group">
