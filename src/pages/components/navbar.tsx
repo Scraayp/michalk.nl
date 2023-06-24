@@ -5,12 +5,14 @@ import { Navbar } from "flowbite-react";
 
 export default function navbar() {
   return (
-    <Navbar fluid={true} rounded={true}>
+    <Navbar className="dark:bg-transparent">
       <Navbar.Brand href="https://michalk.nl" className="mt-4 ml-4">
         <Image
-          src="./logo.png"
+          src="/logo.png"
           className="mr-3 h-8 sm:h-9 rounded-full"
           alt="Scraayp's Logo"
+          width={45}
+          height={50}
         />
         <span className="self-center whitespace-nowrap font-semibold text-primary text-3xl dark:text-white">
           Michal

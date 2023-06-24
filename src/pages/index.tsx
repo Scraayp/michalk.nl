@@ -140,8 +140,8 @@ export default function Home() {
               <div className="relative z-0 w-80 mb-6 group">
                 <input
                   type="email"
-                  name="floating_email"
-                  id="floating_email"
+                  name="email"
+                  id="email"
                   className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
@@ -154,8 +154,8 @@ export default function Home() {
                 <div className="relative z-0 w-80 mb-6 group">
                   <input
                     type="text"
-                    name="floating_first_name"
-                    id="floating_first_name"
+                    name="name"
+                    id="name"
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
                     required
@@ -169,8 +169,8 @@ export default function Home() {
                 <div className="relative z-0 w-80 mb-6 group">
                   <input
                     type="tel"
-                    name="floating_phone"
-                    id="floating_phone"
+                    name="phone"
+                    id="phone"
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
                     required
@@ -183,8 +183,8 @@ export default function Home() {
               <div className="relative z-0 w-80 mb-6 group">
                 <input
                   type="text"
-                  name="floating_company"
-                  id="floating_company"
+                  name="subject"
+                  id="subject"
                   className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
@@ -199,6 +199,7 @@ export default function Home() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   className="block py-2.5 px-0 w-full h-20 text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 ></textarea>
