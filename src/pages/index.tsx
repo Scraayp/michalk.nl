@@ -1,32 +1,15 @@
 import { Inter } from "next/font/google";
-import Navbar from "./components/navbar";
+import NavbarComp from "./components/navbar";
 import Image from "next/image";
 import Footer from "./components/footer";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
-  const [starsCount, setStarsCount] = useState(null);
-
-  useEffect(() => {
-    async function fetchData() {
-      const repoUrl = "Scraayp/michalk.nl";
-      const res = await fetch(`https://api.github.com/repos/${repoUrl}`);
-      const repo = await res.json();
-      setStarsCount(repo.stargazers_count);
-    }
-
-    fetchData();
-  }, []);
 
   return (
     <main>
-      <Script src="https://kit.fontawesome.com/30c1fe66c2.js"></Script>
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></Script>
-      <Navbar />
+      <NavbarComp />
       <div id="mainContent">
         <h1 className="text-4xl font-bold text-center mt-32 text-black dark:text-white">
           <span className="text-primary">Hey!</span> I am Michal,
@@ -41,7 +24,7 @@ export default function Home() {
           About
         </h1>
         <p className="mt-5 font-semibold text-lg inline-block text-black dark:text-white">
-          I am Michal a software developer from{" "}
+          I am Michal, a software developer from{" "}
           <span className="text-primary">the Netherlands.</span> <br />I have
           been coding since 2012 and have been in{" "}
           <span className="text-primary">love</span> with it since. <br />
@@ -148,9 +131,13 @@ export default function Home() {
         <h1 className="text-left text-4xl font-bold text-primary block">
           Contact
         </h1>
-        <div className="flex items-center">
+        <div className="flex items-center flex-col md:flex-row">
           <div id="formcontact">
-            <form className="mt-10">
+            <form
+              className="mt-10"
+              action="https://send.pageclip.co/azcmdAiGz3zpcFLkoMStgQZlZk8UFkj0/michalk-forms-contact"
+              method="POST"
+            >
               <div className="relative z-0 w-80 mb-6 group">
                 <input
                   type="email"
@@ -183,7 +170,6 @@ export default function Home() {
                 <div className="relative z-0 w-80 mb-6 group">
                   <input
                     type="tel"
-                    pattern="\+31[0-9]{9}"
                     name="floating_phone"
                     id="floating_phone"
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -227,10 +213,12 @@ export default function Home() {
             </form>
           </div>
           <div id="contactsocial">
-            <h1 className="text-primary font-bold text-3xl hidden md:block">My Social Media</h1>
+            <h1 className="text-primary font-bold text-3xl hidden md:block">
+              My (Social Media) accounts
+            </h1>
             <div
               id="mobile"
-              className="flex flex-row justify-center mt-10 text-white md:hidden"
+              className="flex flex-row justify-center mt-10 text-primary dark:text-white md:hidden"
             >
               <a
                 href="
@@ -298,6 +286,9 @@ export default function Home() {
         </div>
       </div>
       <Footer />
+      <Script src="https://s.pageclip.co/v1/pageclip.js"></Script>
+      <Script src="https://kit.fontawesome.com/30c1fe66c2.js"></Script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
     </main>
   );
 }

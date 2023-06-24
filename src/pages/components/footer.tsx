@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <footer className=" rounded-lg shadow  m-4">
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400 pb-5">
+      <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400 pb-5 text-center">
         © 2023{" "}
         <a href="mailto:hello@michalk.nl" className="hover:underline">
           Michal
