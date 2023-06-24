@@ -287,7 +287,7 @@ export default function Home() {
       <Footer />
       <Script src="https://s.pageclip.co/v1/pageclip.js"></Script>
       <Script src="https://kit.fontawesome.com/30c1fe66c2.js"></Script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></Script>
     </main>
   );
 }
