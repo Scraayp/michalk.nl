@@ -85,14 +85,14 @@ export default function Home() {
                   <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
                   <Link
                     href="https://github.com/Scraayp/michalk.nl"
-                    className="hover:underline hover:text-primary"
+                    className=" hover:text-primary"
                   >
                     Repository
                   </Link>
                   <span className="ml-3 flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
                   <Link
                     href="/api/redirect/portfolio"
-                    className="hover:underline hover:text-primary"
+                    className="hover:text-primary"
                   >
                     Demo
                   </Link>
@@ -131,14 +131,14 @@ export default function Home() {
                   <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
                   <Link
                     href="https://github.com/Michael-J-Scofield/discord-anti-spam"
-                    className="hover:underline hover:text-primary"
+                    className=" hover:text-primary"
                   >
                     Repository
                   </Link>
                   <span className="ml-3 flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
                   <Link
                     href="/api/redirect/das"
-                    className="hover:underline hover:text-primary"
+                    className=" hover:text-primary"
                   >
                     Demo
                   </Link>
@@ -233,6 +233,16 @@ export default function Home() {
                 Submit
               </button>
             </form>
+            <span className="block mt-5 text-gray-500 text-center sm:text-left">
+              You can also contact me trough email.
+              <br />
+              <Link
+                href="mailto:hello@michalk.nl"
+                className="hover:text-primary"
+              >
+                hello@michalk.nl
+              </Link>
+            </span>
           </div>
           <div id="contactsocial">
             <h1 className="text-primary font-bold text-3xl hidden md:block">
