@@ -9,7 +9,7 @@ export default function navbar() {
       <Navbar.Brand href="https://michalk.nl" className="mt-4 ml-4">
         <Image
           src="/logo.png"
-          className="mr-3 h-8 sm:h-9 rounded-full"
+          className="mr-3 sm:h-9 rounded-full w-10 h-10"
           alt="Scraayp's Logo"
           width={45}
           height={50}
