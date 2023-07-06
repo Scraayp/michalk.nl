@@ -156,8 +156,9 @@ export default function Home() {
           <div id="formcontact">
             <form
               className="mt-10"
-              action="https://send.pageclip.co/azcmdAiGz3zpcFLkoMStgQZlZk8UFkj0/contact-form"
-              method="POST"
+              method="post"
+              // @ts-ignore
+              netlify
             >
               <div className="relative z-0 w-80 mb-6 group">
                 <input
