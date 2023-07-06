@@ -157,6 +157,7 @@ export default function Home() {
             <form
               className="mt-10"
               method="post"
+              action="/contact_submit"
               data-netlify="true"
               // @ts-ignore
               netlify
@@ -320,7 +321,6 @@ export default function Home() {
         </div>
       </div>
       <Footer />
-      <Script src="https://s.pageclip.co/v1/pageclip.js"></Script>
       <Script src="https://kit.fontawesome.com/30c1fe66c2.js"></Script>
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></Script>
     </main>
