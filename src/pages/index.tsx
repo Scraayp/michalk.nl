@@ -103,6 +103,47 @@ export default function Home() {
           <div className="project mt-10">
             <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Hostsapling
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                A software hosting platform for Discord bots, game servers and
+                more.
+              </p>
+              <div>
+                <span className="text-gray-400 text-sm italic">
+                  Technologies used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Open Source Contributing
+                </span>
+                <span className="text-gray-400 text-sm italic">
+                  Languages used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Typescript
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  Javascript
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  PHP
+                </span>
+                <span className="text-gray-400 text-sm italic">Links</span>
+                <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
+                  <Link
+                    href="https://hostsapling.net"
+                    className=" hover:text-primary"
+                  >
+                    Website
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="project mt-10">
+            <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Discord Anti Spam
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
@@ -143,6 +184,57 @@ export default function Home() {
                     Demo
                   </Link>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="project mt-10">
+          <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Werkvervanger
+            </h5>
+            <p className="font-normal text-gray-700 dark:text-gray-400">
+              A website for a company that provides replacements for workers.
+            </p>
+            <div>
+              <span className="text-gray-400 text-sm italic">
+                Technologies used:
+              </span>
+              <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
+                Laravel
+                <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                Tailwind
+                <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                MySQL
+              </span>
+              <span className="text-gray-400 text-sm italic">
+                Languages used:
+              </span>
+              <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
+                PHP
+                <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                Typescript
+                <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                SQL
+              </span>
+              <span className="text-gray-400 text-sm italic">Links</span>
+              <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
+                <Link
+                  href="https://github.com/scraayp/werk-vervanger"
+                  className=" hover:text-primary"
+                >
+                  Repository
+                </Link>
+                <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                <Link
+                  href="https://werkvervanger.michalk.nl"
+                  className=" hover:text-primary"
+                >
+                  Demo
+                </Link>
               </div>
             </div>
           </div>
