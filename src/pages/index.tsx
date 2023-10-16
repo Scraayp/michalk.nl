@@ -103,6 +103,47 @@ export default function Home() {
           <div className="project mt-10">
             <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Hostsapling
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                A software hosting platform for Discord bots, game servers and
+                more.
+              </p>
+              <div>
+                <span className="text-gray-400 text-sm italic">
+                  Technologies used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Open Source Contributing
+                </span>
+                <span className="text-gray-400 text-sm italic">
+                  Languages used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Typescript
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  Javascript
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  PHP
+                </span>
+                <span className="text-gray-400 text-sm italic">Links</span>
+                <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
+                  <Link
+                    href="https://hostsapling.net"
+                    className=" hover:text-primary"
+                  >
+                    Website
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="project mt-10">
+            <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Discord Anti Spam
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
@@ -147,6 +188,57 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="project mt-10">
+          <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Werkvervanger
+            </h5>
+            <p className="font-normal text-gray-700 dark:text-gray-400">
+              A website for a company that provides replacements for workers.
+            </p>
+            <div>
+              <span className="text-gray-400 text-sm italic">
+                Technologies used:
+              </span>
+              <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
+                Laravel
+                <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                Tailwind
+                <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                MySQL
+              </span>
+              <span className="text-gray-400 text-sm italic">
+                Languages used:
+              </span>
+              <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
+                PHP
+                <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                Typescript
+                <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                SQL
+              </span>
+              <span className="text-gray-400 text-sm italic">Links</span>
+              <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
+                <Link
+                  href="https://github.com/scraayp/werk-vervanger"
+                  className=" hover:text-primary"
+                >
+                  Repository
+                </Link>
+                <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                <Link
+                  href="https://werkvervanger.michalk.nl"
+                  className=" hover:text-primary"
+                >
+                  Demo
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="contact" className="m-auto w-head mb-40">
         <h1 className="text-left text-4xl font-bold text-primary block">
@@ -157,9 +249,12 @@ export default function Home() {
             <form
               className="mt-10"
               method="post"
+              action="/contact_submit"
+              data-netlify="true"
               // @ts-ignore
               netlify
             >
+              <input type="hidden" name="form-name" value="contact"></input>
               <div className="relative z-0 w-80 mb-6 group">
                 <input
                   type="email"
@@ -196,7 +291,6 @@ export default function Home() {
                     id="phone"
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
-                    required
                   />
                   <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                     Phone number (+3689716634)
@@ -319,7 +413,6 @@ export default function Home() {
         </div>
       </div>
       <Footer />
-      <Script src="https://s.pageclip.co/v1/pageclip.js"></Script>
       <Script src="https://kit.fontawesome.com/30c1fe66c2.js"></Script>
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></Script>
     </main>
