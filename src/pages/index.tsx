@@ -156,8 +156,8 @@ export default function Home() {
           <div id="formcontact">
             <form
               className="mt-10"
-              method="post"
-              // @ts-ignore
+              name="Contact"
+              method="POST"
               netlify
             >
               <div className="relative z-0 w-80 mb-6 group">
