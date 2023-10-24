@@ -2,16 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
 * {
-  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 :root {
-  --darkbg: "#1F2029";
-  --lightbg: "#fff";
-  --primary: "#31C1FF";
+  --bg-color: #0f151a;
+  --text-color: #ffffff;
+  --main-color: #f53fa1;
+  --other-color: #00ecff;
+  --h1-font: 4.7rem;
+  
 }
 
 /* Nav styling */
