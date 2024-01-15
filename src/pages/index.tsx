@@ -1,9 +1,8 @@
-import { Inter } from "next/font/google";
-import NavbarComp from "./components/navbar";
 import Image from "next/image";
-import Footer from "./components/footer";
 import Link from "next/link";
 import Script from "next/script";
+import Footer from "./components/footer";
+import NavbarComp from "./components/navbar";
 
 export default function Home() {
   return (
@@ -188,53 +187,139 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="project mt-10">
-          <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Werkvervanger
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              A website for a company that provides replacements for workers.
-            </p>
-            <div>
-              <span className="text-gray-400 text-sm italic">
-                Technologies used:
-              </span>
-              <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
-                <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
-                Laravel
-                <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                Tailwind
-                <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                MySQL
-              </span>
-              <span className="text-gray-400 text-sm italic">
-                Languages used:
-              </span>
-              <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
-                <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
-                PHP
-                <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                Typescript
-                <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                SQL
-              </span>
-              <span className="text-gray-400 text-sm italic">Links</span>
-              <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
-                <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
-                <Link
-                  href="https://github.com/scraayp/werk-vervanger"
-                  className=" hover:text-primary"
-                >
-                  Repository
-                </Link>
-                <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                <Link
-                  href="https://werkvervanger.michalk.nl"
-                  className=" hover:text-primary"
-                >
-                  Demo
-                </Link>
+        <div className="flex flex-col md:flex-row md:space-x-4">
+          <div className="project mt-10">
+            <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                MC-Node
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                A software hosting platform (dutch based).
+              </p>
+              <div>
+                <span className="text-gray-400 text-sm italic">
+                  Technologies used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Client Support
+                </span>
+
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white"></span>
+                <span className="text-gray-400 text-sm italic">Links</span>
+                <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
+                  <Link
+                    href="https://mc-node.net"
+                    className=" hover:text-primary"
+                  >
+                    Website
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="project mt-10">
+            <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Werkvervanger
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                A website for a company that provides replacements for workers.
+              </p>
+              <div>
+                <span className="text-gray-400 text-sm italic">
+                  Technologies used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Laravel
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  Tailwind
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  MySQL
+                </span>
+                <span className="text-gray-400 text-sm italic">
+                  Languages used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
+                  PHP
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  Typescript
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  SQL
+                </span>
+                <span className="text-gray-400 text-sm italic">Links</span>
+                <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
+                  <Link
+                    href="https://github.com/scraayp/werk-vervanger"
+                    className=" hover:text-primary"
+                  >
+                    Repository
+                  </Link>
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  <Link
+                    href="https://werkvervanger.michalk.nl"
+                    className=" hover:text-primary"
+                  >
+                    Demo
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="project mt-10">
+            <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Tranquilo Roleplay
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                A FiveM roleplay server. I was the lead developer of this
+                server. I also made the website. (Dutch based)
+              </p>
+              <div>
+                <span className="text-gray-400 text-sm italic">
+                  Technologies used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Fivem Development
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0 ml-3"></span>
+                  Open Source Contributing
+                </span>
+                <span className="text-gray-400 text-sm italic">
+                  Languages used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Lua
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  Typescript
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  SQL
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  SSH
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white"></span>
+                <span className="text-gray-400 text-sm italic">Links</span>
+                <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
+                  <Link
+                    href="https://tranquiloroleplay.nl"
+                    className=" hover:text-primary"
+                  >
+                    Website
+                  </Link>
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0 ml-2"></span>
+                  <Link
+                    href="https://tranquillo-apv-website.vercel.app/"
+                    className=" hover:text-primary"
+                  >
+                    APV
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -246,14 +331,7 @@ export default function Home() {
         </h1>
         <div className="flex items-center flex-col md:flex-row">
           <div id="formcontact">
-            <form
-              className="mt-10"
-              method="post"
-              action="/contact_submit"
-              data-netlify="true"
-              // @ts-ignore
-              netlify
-            >
+            <form className="mt-10" method="post" action="/contact_submit">
               <input type="hidden" name="form-name" value="contact"></input>
               <div className="relative z-0 w-80 mb-6 group">
                 <input
