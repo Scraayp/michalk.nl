@@ -3,7 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import Footer from "./components/footer";
 import NavbarComp from "./components/navbar";
-import { ContactForm } from "./components/contactForm";
+import ContactForm from "./components/contactForm";
 
 export default function Home() {
   return (
