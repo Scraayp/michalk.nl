@@ -4,8 +4,13 @@ import Script from "next/script";
 import Footer from "./components/footer";
 import NavbarComp from "./components/navbar";
 import ContactForm from "./components/contactForm";
+import ReactGA from "react-ga4";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    ReactGA.initialize("G-G9V2N9XES1"); // Use your Google Analytics Measurement ID
+  }, []);
   return (
     <main>
       <NavbarComp />
@@ -356,6 +361,13 @@ export default function Home() {
                 href="
             https://www.github.com/scraayp"
                 target="_blank"
+                onClick={() =>
+                  ReactGA.event({
+                    category: "Social Media",
+                    action: "Click",
+                    label: "GitHub",
+                  })
+                }
               >
                 <i className="fab fa-github fa-2x"></i>
               </a>
@@ -363,6 +375,13 @@ export default function Home() {
                 href="
               https://www.linkedin.com/in/michkolasa/"
                 target="_blank"
+                onClick={() =>
+                  ReactGA.event({
+                    category: "Social Media",
+                    action: "Click",
+                    label: "LinkedIn",
+                  })
+                }
               >
                 <i className="fab fa-linkedin ml-4 fa-2x"></i>
               </a>
@@ -370,6 +389,13 @@ export default function Home() {
                 href="https://www.twitter.com/scraayp
             "
                 target="_blank"
+                onClick={() =>
+                  ReactGA.event({
+                    category: "Social Media",
+                    action: "Click",
+                    label: "Twitter",
+                  })
+                }
               >
                 <i className="fab fa-twitter ml-4 fa-2x"></i>
               </a>
@@ -378,6 +404,13 @@ export default function Home() {
                 href="
               https://discord.gg/bWsYCZNKaU"
                 target="_blank"
+                onClick={() =>
+                  ReactGA.event({
+                    category: "Social Media",
+                    action: "Click",
+                    label: "Discord",
+                  })
+                }
               >
                 <i className="fab fa-discord ml-4 fa-2x"></i>
               </a>
@@ -387,30 +420,85 @@ export default function Home() {
                 <button
                   type="button"
                   className="text-primary hover:text-white border border-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-4 text-center mr-2 mb-2 dark:border-primary dark:text-primary dark:hover:text-white dark:hover:bg-primary dark:focus:ring-primary"
+                  onClick={() =>
+                    ReactGA.event({
+                      category: "Social Media",
+                      action: "Click",
+                      label: "GitHub",
+                    })
+                  }
                 >
-                  <i className="fab fa-github mr-2 fa-1x"></i>
-                  Github
+                  <a
+                    href="https://www.github.com/scraayp"
+                    target="_blank"
+                    onClick={() =>
+                      ReactGA.event({
+                        category: "Social Media",
+                        action: "Click",
+                        label: "GitHub",
+                      })
+                    }
+                  >
+                    <i className="fab fa-github mr-2 fa-1x"></i>
+                    Github
+                  </a>
                 </button>
                 <button
                   type="button"
                   className="text-primary hover:text-white border border-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-4 text-center mr-2 mb-2 dark:border-primary dark:text-primary dark:hover:text-white dark:hover:bg-primary dark:focus:ring-primary"
                 >
-                  <i className="fab fa-linkedin mr-2 fa-1x"></i>
-                  Linkedin
+                  <a
+                    href="https://www.linkedin.com/in/michkolasa/"
+                    target="_blank"
+                    onClick={() =>
+                      ReactGA.event({
+                        category: "Social Media",
+                        action: "Click",
+                        label: "LinkedIn",
+                      })
+                    }
+                  >
+                    <i className="fab fa-linkedin mr-2 fa-1x"></i>
+                    Linkedin
+                  </a>
                 </button>
                 <button
                   type="button"
                   className="text-primary hover:text-white border border-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-4 text-center mr-2 mb-2 dark:border-primary dark:text-primary dark:hover:text-white dark:hover:bg-primary dark:focus:ring-primary"
                 >
-                  <i className="fab fa-twitter mr-2 fa-1x"></i>
-                  Twitter
+                  <a
+                    href="https://www.twitter.com/scraayp"
+                    target="_blank"
+                    onClick={() =>
+                      ReactGA.event({
+                        category: "Social Media",
+                        action: "Click",
+                        label: "Twitter",
+                      })
+                    }
+                  >
+                    <i className="fab fa-twitter mr-2 fa-1x"></i>
+                    Twitter
+                  </a>
                 </button>
                 <button
                   type="button"
                   className="text-primary hover:text-white border border-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-4 text-center mr-2 mb-2 dark:border-primary dark:text-primary dark:hover:text-white dark:hover:bg-primary dark:focus:ring-primary"
                 >
-                  <i className="fab fa-discord mr-2 fa-1x"></i>
-                  Discord
+                  <a
+                    href=" https://discord.gg/bWsYCZNKaU"
+                    target="_blank"
+                    onClick={() =>
+                      ReactGA.event({
+                        category: "Social Media",
+                        action: "Click",
+                        label: "Discord",
+                      })
+                    }
+                  >
+                    <i className="fab fa-discord mr-2 fa-1x"></i>
+                    Discord
+                  </a>
                 </button>
               </div>
             </div>
