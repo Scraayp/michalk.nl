@@ -23,43 +23,48 @@ export default function Home() {
           and websites.
         </h2>
       </div>
-      <div id="about" className="m-auto w-head mt-60 block h-64">
-        <h1 className="text-left text-4xl font-bold text-primary block">
-          About
-        </h1>
-        <p className="mt-5 font-semibold text-lg inline-block text-black dark:text-white">
-          I am Michal, a software developer from{" "}
-          <span className="text-primary">the Netherlands.</span> <br />I have
-          been coding since 2012 and have been in{" "}
-          <span className="text-primary">love</span> with it since. <br />
-          In my free time, I spend the most time on{" "}
-          <span className="text-primary">soccer</span>. <br />I am a player,
-          referee and a trainer at my local club.
-        </p>
-        <br />
-        <Link href="">
-          <button className="mt-5 md:mt-4 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 dark:bg-darkbg bg-white rounded-md group-hover:bg-opacity-0">
-              CV<i className="fa-solid fa-file pl-3"></i>
-            </span>
-          </button>
-        </Link>
+      <div id="about" className="m-auto w-head mt-60 block">
+        <div className="flex flex-col md:flex-row">
+          <div className="flex-1">
+            <h1 className="text-left text-4xl font-bold text-primary">About</h1>
+            <p className="mt-5 font-semibold text-lg text-black dark:text-white">
+              I am Michal, a software developer from{" "}
+              <span className="text-primary">the Netherlands.</span> <br />I
+              have been coding since 2012 and have been in{" "}
+              <span className="text-primary">love</span> with it since. <br />
+              In my free time, I spend the most time on{" "}
+              <span className="text-primary">soccer</span>. <br />I am a player,
+              referee, and a trainer at my local club.
+            </p>
 
-        <Image
-          src={"/me.jpg"}
-          alt="Yeah, that's me."
-          width={400}
-          height={400}
-          className="rounded-full right-0 float-right mt-16 mb-16 md:mb-0 md:mt-0"
-        />
+            <Link href="">
+              <button className="mt-5 md:mt-4 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 dark:bg-darkbg bg-white rounded-md group-hover:bg-opacity-0">
+                  CV<i className="fa-solid fa-file pl-3"></i>
+                </span>
+              </button>
+            </Link>
+          </div>
+
+          <div className="flex-none md:ml-8 mt-8 md:-mt-20">
+            <Image
+              src={"/me.jpg"}
+              alt="Yeah, that's me."
+              width={400}
+              height={400}
+              className="rounded-full"
+            />
+          </div>
+        </div>
       </div>
-      <div id="projects" className="m-auto w-head mt-96 mb-40">
+
+      <div id="projects" className="m-auto w-4/5 mt-96 mb-40">
         <h1 className="text-left text-4xl font-bold text-primary block">
           Projects
         </h1>
-        <div className="flex flex-col md:flex-row md:space-x-4">
-          <div className="project mt-10">
-            <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+          <div className="project">
+            <div className="block h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Personal Portfolio
               </h5>
@@ -105,49 +110,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="project mt-10">
-            <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Hostsapling
-              </h5>
-              <p className="font-normal text-gray-700 dark:text-gray-400">
-                A software hosting platform for Discord bots, game servers and
-                more.
-              </p>
-              <div>
-                <span className="text-gray-400 text-sm italic">
-                  Technologies used:
-                </span>
-                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
-                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
-                  Open Source Contributing
-                </span>
-                <span className="text-gray-400 text-sm italic">
-                  Languages used:
-                </span>
-                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
-                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
-                  Typescript
-                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                  Javascript
-                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                  PHP
-                </span>
-                <span className="text-gray-400 text-sm italic">Links</span>
-                <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
-                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
-                  <Link
-                    href="https://hostsapling.net"
-                    className=" hover:text-primary"
-                  >
-                    Website
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="project mt-10">
-            <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+          <div className="project">
+            <div className="block h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Discord Anti Spam
               </h5>
@@ -161,7 +125,7 @@ export default function Home() {
                 </span>
                 <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
                   <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
-                  NPM Modules
+                  NPM
                 </span>
                 <span className="text-gray-400 text-sm italic">
                   Languages used:
@@ -169,11 +133,11 @@ export default function Home() {
                 <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
                   <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
                   Javascript
-                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full ml-3 mr-1.5 flex-shrink-0"></span>
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
                   Typescript
                 </span>
                 <span className="text-gray-400 text-sm italic">Links</span>
-                <div className=" flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
                   <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
                   <Link
                     href="https://github.com/Michael-J-Scofield/discord-anti-spam"
@@ -181,9 +145,54 @@ export default function Home() {
                   >
                     Repository
                   </Link>
-                  <span className="ml-3 flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="project">
+            <div className="block h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                What to wear?
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                A simple website telling you what you can wear based on the
+                weather api.
+              </p>
+              <div>
+                <span className="text-gray-400 text-sm italic">
+                  Technologies used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Meotosource API
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  NextJS
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  Tailwind
+                </span>
+                <span className="text-gray-400 text-sm italic">
+                  Languages used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Javascript
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  Typescript
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  CSS
+                </span>
+                <span className="text-gray-400 text-sm italic">Links</span>
+                <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
                   <Link
-                    href="/api/redirect/das"
+                    href="https://github.com/Scraayp/kleren.michalk.nl"
+                    className=" hover:text-primary"
+                  >
+                    Repository
+                  </Link>
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  <Link
+                    href="https://kleren.michalk.nl"
                     className=" hover:text-primary"
                   >
                     Demo
@@ -192,15 +201,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex flex-col md:flex-row md:space-x-4">
-          <div className="project mt-10">
-            <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+          <div className="project">
+            <div className="block h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                MC-Node
+                Mad Gamer
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                A software hosting platform (dutch based).
+                A website I have made for my Front End Development Exam.
               </p>
               <div>
                 <span className="text-gray-400 text-sm italic">
@@ -208,30 +215,86 @@ export default function Home() {
                 </span>
                 <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
                   <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
-                  Client Support
+                  NuxtJS
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  TailwindCSS
                 </span>
-
-                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white"></span>
+                <span className="text-gray-400 text-sm italic">
+                  Languages used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Javascript
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  Typescript
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  CSS
+                </span>
                 <span className="text-gray-400 text-sm italic">Links</span>
                 <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
                   <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
                   <Link
-                    href="https://mc-node.net"
+                    href="https://github.com/Scraayp/brouwwereld/tree/examen-FED2024"
                     className=" hover:text-primary"
                   >
-                    Website
+                    Repository
+                  </Link>
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  <Link
+                    href="https://fd2024.michalk.nl/"
+                    className=" hover:text-primary"
+                  >
+                    Demo
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="project mt-10">
-            <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+          <div className="project">
+            <div className="block h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Status Page
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                A uptime monitor / status page, which monitors my own projects.
+              </p>
+              <div>
+                <span className="text-gray-400 text-sm italic">
+                  Technologies used:
+                </span>
+                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
+                  Uptime Kuma
+                </span>
+
+                <span className="text-gray-400 text-sm italic">Links</span>
+                <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
+                  <Link
+                    href="https://github.com/louislam/uptime-kuma"
+                    className=" hover:text-primary"
+                  >
+                    Repository
+                  </Link>
+                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  <Link
+                    href="https://status.michalk.nl"
+                    className=" hover:text-primary"
+                  >
+                    Demo
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="project">
+            <div className="block h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Werkvervanger
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                A website for a company that provides replacements for workers.
+                A website which will allow users to request easier work shifts
+                replacements
               </p>
               <div>
                 <span className="text-gray-400 text-sm italic">
@@ -240,10 +303,10 @@ export default function Home() {
                 <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
                   <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
                   Laravel
-                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                  Tailwind
-                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                  MySQL
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  TailwindCSS
+                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  NestJS
                 </span>
                 <span className="text-gray-400 text-sm italic">
                   Languages used:
@@ -251,79 +314,19 @@ export default function Home() {
                 <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
                   <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
                   PHP
-                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
                   Typescript
-                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                  SQL
+                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-3 flex-shrink-0"></span>
+                  CSS
                 </span>
                 <span className="text-gray-400 text-sm italic">Links</span>
                 <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
                   <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
                   <Link
-                    href="https://github.com/scraayp/werk-vervanger"
+                    href="https://github.com/Scraayp/werkvervanger"
                     className=" hover:text-primary"
                   >
                     Repository
-                  </Link>
-                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                  <Link
-                    href="https://werkvervanger.michalk.nl"
-                    className=" hover:text-primary"
-                  >
-                    Demo
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="project mt-10">
-            <div className="block md:w-96 w-auto h-72 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Tranquilo Roleplay
-              </h5>
-              <p className="font-normal text-gray-700 dark:text-gray-400">
-                A FiveM roleplay server. I was the lead developer of this
-                server. I also made the website. (Dutch based)
-              </p>
-              <div>
-                <span className="text-gray-400 text-sm italic">
-                  Technologies used:
-                </span>
-                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
-                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0"></span>
-                  Fivem Development
-                  <span className="flex w-2.5 h-2.5 bg-red-500 rounded-full mr-1.5 flex-shrink-0 ml-3"></span>
-                  Open Source Contributing
-                </span>
-                <span className="text-gray-400 text-sm italic">
-                  Languages used:
-                </span>
-                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white">
-                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 flex-shrink-0"></span>
-                  Lua
-                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                  Typescript
-                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                  SQL
-                  <span className="flex w-2.5 h-2.5 bg-yellow-300 rounded-full mr-1.5 ml-2 flex-shrink-0"></span>
-                  SSH
-                </span>
-                <span className="flex items-center text-sm font-medium text-gray-900 dark:text-white"></span>
-                <span className="text-gray-400 text-sm italic">Links</span>
-                <div className="y flex items-center text-sm font-medium text-gray-900 dark:text-white">
-                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0"></span>
-                  <Link
-                    href="https://tranquiloroleplay.nl"
-                    className=" hover:text-primary"
-                  >
-                    Website
-                  </Link>
-                  <span className="flex w-2.5 h-2.5 bg-purple-600 rounded-full mr-1.5 flex-shrink-0 ml-2"></span>
-                  <Link
-                    href="https://tranquillo-apv-website.vercel.app/"
-                    className=" hover:text-primary"
-                  >
-                    APV
                   </Link>
                 </div>
               </div>
@@ -331,11 +334,15 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="contact" className="m-auto w-head mb-40">
+
+      <div
+        id="contact"
+        className="w-head mb-40 m-auto align-middle justify-center"
+      >
         <h1 className="text-left text-4xl font-bold text-primary block">
           Contact
         </h1>
-        <div className="flex items-center flex-col md:flex-row">
+        <div className="flex items-center flex-col md:flex-row ">
           <div id="formcontact">
             <ContactForm />
             <span className="block mt-5 text-gray-500 text-center sm:text-left">
