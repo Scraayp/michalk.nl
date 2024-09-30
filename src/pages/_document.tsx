@@ -16,6 +16,10 @@ export default function Document() {
           src="https://www.googletagmanager.com/gtag/js?id=G-G9V2N9XES1"
         />
         <Script
+          src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+          rel="stylesheet"
+        />
+        <Script
           id="gtag-init"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -27,6 +31,7 @@ export default function Document() {
             `,
           }}
         />
+
         <Main />
         <NextScript />
         <SpeedInsights />
