@@ -8,24 +8,6 @@ export async function POST(req: NextRequest) {
     const origin = req.headers.get("origin");
     const referer = req.headers.get("referer");
 
-    if (!origin && !referer) {
-      return NextResponse.json(
-        { error: "Unauthorized access." },
-        { status: 403 }
-      );
-    }
-
-    const isAllowed =
-      origin === "https://michalk.nl" ||
-      referer?.startsWith("https://michalk.nl");
-
-    if (!isAllowed) {
-      return NextResponse.json(
-        { error: "Access denied: Invalid domain." },
-        { status: 403 }
-      );
-    }
-
     const body = await req.json();
     const { name, email, message } = body;
 
