@@ -16,8 +16,8 @@ export async function POST(req: NextRequest) {
     }
 
     const isAllowed =
-      origin === "http://michalk.nl" ||
-      referer?.startsWith("http://michalk.nl");
+      origin === "https://michalk.nl" ||
+      referer?.startsWith("https://michalk.nl");
 
     if (!isAllowed) {
       return NextResponse.json(
