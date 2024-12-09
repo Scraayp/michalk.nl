@@ -1,42 +1,36 @@
-# My own portfolio website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-I've created this website to showcase my projects and skills. It's a work in progress, but I'm happy with the results so far. I've used React and Tailwind CSS to build it. I've also designed the website in Figma.
+## Getting Started
 
-## **Design**
+First, run the development server:
 
-I've designed the website in Figma. You can see the design [here](https://www.figma.com/file/tjEOk3CWJfj0DLCEGo0Gxb/michalk.nl?type=design&node-id=0%3A1&t=9mRzWozHMP9iELxt-1).
-
-### **Why Figma**
-I've used Figma for school projects and I've found it to be a great tool for designing websites. It's easy to use and it's free. I've also used Adobe XD, but I prefer Figma.
-
-## **Technologies**
-- ReactJS
-- Tailwind CSS
-- Figma
-
-## **Installation**
-1. Clone the repository
-2. Install the dependencies
 ```bash
-npm install
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
-3. Run the app
-```bash
-npm start / npm run dev
-```
-4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## **License**
-[MIT](https://choosealicense.com/licenses/mit/)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## **Contact**
-- [LinkedIn](https://www.linkedin.com/in/michkolasa/)
-- [Portfolio](https://michalk.nl/)
-- [Email](mailto:hello@michalk.nl)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## **Acknowledgements**
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Figma](https://www.figma.com/)
-- [React Icons](https://react-icons.github.io/react-icons/)
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
