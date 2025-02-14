@@ -3,31 +3,97 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useTheme } from "next-themes";
-import { Github, Linkedin, Mail, Moon, Sun, Terminal } from "lucide-react";
+import { Code, Github, GraduationCap, Linkedin, Mail, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Loading } from "@/components/loading";
+
+type GithubStats = {
+  followers: number;
+  public_repos: number;
+  public_gists: number;
+};
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
 
+  const [loading, setLoading] = useState(true);
+  const [githubStats, setGithubStats] = useState<GithubStats | null>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    fetch("https://api.github.com/users/scraayp")
+      .then((res) => res.json())
+      .then((data) => {
+        setGithubStats({
+          followers: data.followers,
+          public_repos: data.public_repos,
+          public_gists: data.public_gists,
+        });
+      });
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loading />;
+
+  const education = [
+    {
+      degree: "Software Developer",
+      school: "Koning Willem I College",
+      year: "2022-2025",
+      description:
+        "Specialized in Full-Stack Development with a focus on modern web technologies",
+    },
+    {
+      degree: "Economics and Business Administration",
+      school: "Baanderherencollege",
+      year: "2018-2022",
+      description:
+        "Specialized in Business Information Management leading up to IT",
+    },
+  ];
+
   const projects = [
     {
-      title: "Project Alpha",
-      description: "A modern web application built with Next.js and TypeScript",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+      title: "Werkvervanger",
+      tech: "Laravel, PHP, Tailwind CSS, API, MySQL",
+      year: "2025 (To Be Finished)",
+      description:
+        "A modern web application for workers to find replacements for their work shifts. The app can be managed by the employer.",
+      link: "https://github.com/werkvervanger",
+      demoLink: "https://werkvervanger.michalk.nl",
     },
     {
-      title: "Project Beta",
-      description: "Real-time data visualization dashboard",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
-      tags: ["React", "D3.js", "Firebase"],
+      title: "Xstros - Support Dashboard",
+      tech: "Laravel, Tailwind CSS, PHP, MySQL, Authentication",
+      year: "2025",
+      description:
+        "A support dashboard where users can create tickets and view their previous tickets, also view their transactions supported by Stripe.",
+      link: "https://github.com/Scraayp/xstros-support-panel",
+      demoLink: "https://support.xstros.xyz",
     },
     {
-      title: "Project Gamma",
-      description: "Mobile-first e-commerce platform",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
-      tags: ["React Native", "Node.js", "MongoDB"],
+      title: "Xstros - Webhosting",
+      tech: "Hosting, System configuration, Cloudpanel, Mailcow",
+      year: "2024",
+      description:
+        "A web hosting platform where users can host their websites, using cloudpanel and mailcow.",
+      link: "https://www.cloudpanel.io/",
+      demoLink: "https://web.xstros.xyz",
+    },
+    {
+      title: "Discord Anti Spam",
+      tech: "Javascript, Typescript, NodeJS, Discord",
+      year: "2021-2023",
+      description:
+        "A NPM module based for DiscordJS to prevent spam in servers.",
+      link: "https://github.com/Michael-J-Scofield/discord-anti-spam",
+      demoLink: "https://discord-anti-spam.js.org/",
     },
   ];
 
@@ -45,77 +111,225 @@ export default function Home() {
                 </span>
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold">
-                Hi, I'm <span className="text-primary">John Doe</span>
+                Hi, I'm <span className="text-primary">Michal Kolasa</span>
                 <br />
                 Full Stack Developer
               </h1>
               <p className="text-lg text-muted-foreground">
-                I build exceptional and accessible digital experiences for the web.
+                I build websites and apps for the web. ☕☕☕
               </p>
-              <div className="flex gap-4">
-                <Button className="shadow-lg shadow-primary/25 hover:shadow-primary/35 transition-all">
-                  <Github className="mr-2 h-4 w-4" />
-                  GitHub
-                </Button>
-                <Button variant="outline" className="card-hover">
-                  <Linkedin className="mr-2 h-4 w-4" />
-                  LinkedIn
-                </Button>
-                <Button variant="outline" className="card-hover">
-                  <Mail className="mr-2 h-4 w-4" />
-                  Email
-                </Button>
+              <div className="flex flex-wrap gap-4">
+                <Link href="https://github.com/scraayp">
+                  <Button className="shadow-lg shadow-primary/25 hover:shadow-primary/35 transition-all">
+                    <Github className="mr-2 h-4 w-4" />
+                    GitHub
+                  </Button>
+                </Link>
+                <Link href="https://www.linkedin.com/in/michkolasa/">
+                  <Button variant="outline" className="card-hover">
+                    <Linkedin className="mr-2 h-4 w-4" />
+                    LinkedIn
+                  </Button>
+                </Link>
+                <Link href="https://x.com/scraayp">
+                  <Button variant="outline" className="card-hover">
+                    <X className="mr-2 h-4 w-4" />X (Twitter)
+                  </Button>
+                </Link>
+                <Link href="mailto:hello@michalk.nl">
+                  <Button variant="outline" className="card-hover">
+                    <Mail className="mr-2 h-4 w-4" />
+                    Email
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="flex-1 relative">
-              <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-              <Image
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=600&fit=crop"
-                alt="Profile"
-                width={500}
-                height={500}
-                className="rounded-2xl shadow-2xl shadow-primary/20 transition-transform hover:scale-[1.02] duration-500"
-                priority
-              />
+              {/* Centered Illustration Container */}
+              <div className="w-full h-full flex justify-center items-center">
+                <div className="relative animate-float w-96 h-96 rounded-full overflow-hidden shadow-2xl">
+                  {/* Gradient Background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-pink-500 to-purple-600" />
+                  {/* SVG Illustration on Top */}
+                  <Image
+                    src="/pfp.jpg"
+                    alt="Man Illustration"
+                    width={384}
+                    height={384}
+                    className="relative object-contain"
+                  />
+                </div>
+              </div>
+
+              {/* Custom CSS for the floating animation */}
+              <style jsx>{`
+                @keyframes float {
+                  0%,
+                  100% {
+                    transform: translateY(0);
+                  }
+                  50% {
+                    transform: translateY(-20px);
+                  }
+                }
+                .animate-float {
+                  animation: float 3s ease-in-out infinite;
+                }
+              `}</style>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section className="py-16 bg-muted/50 relative">
-        <div className="absolute inset-0 hero-gradient opacity-50" />
-        <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-3xl font-bold mb-12">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="overflow-hidden card-hover border-primary/10">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={800}
-                  height={400}
-                  className="w-full h-48 object-cover transition-transform hover:scale-105 duration-500"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+      <div className="min-h-screen bg-background pt-24">
+        <div className="container mx-auto px-4 space-y-16">
+          {/* About Section */}
+          <section className="grid gap-12 justify-center">
+            <div className="space-y-6 text-center">
+              <h1 className="text-4xl font-bold">About Me</h1>
+              <p className="text-lg text-muted-foreground">
+                I'm a passionate full-stack developer with expertise in modern
+                web technologies. I love building beautiful, functional, and
+                user-friendly applications. I'm currently studying Software
+                Development, while I work on various projects in my free time.
+                <br />
+                <br />
+                I'm a soccer referee in my free time, I referee games all around
+                Netherlands for the KNVB. I also enjoy playing video games and
+                watching movies.
+              </p>
+              <div className="flex justify-center gap-4">
+                <Link
+                  href="https://github.com/scraayp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  <Github className="h-6 w-6" />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/michkolasa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </Link>
+                <Link
+                  href="https://x.com/scraayp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  <X className="h-6 w-6" />
+                </Link>
+                <Link
+                  href="mailto:hello@michalk.nl"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  <Mail className="h-6 w-6" />
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          {/* GitHub Stats */}
+          {githubStats && (
+            <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              <Card className="p-6 text-center shadow-lg dark:shadow-white/40">
+                <h3 className="text-2xl font-bold">{githubStats.followers}</h3>
+                <p className="text-muted-foreground">GitHub Followers</p>
               </Card>
-            ))}
-          </div>
+              <Card className="p-6 text-center shadow-lg dark:shadow-white/40">
+                <h3 className="text-2xl font-bold">
+                  {githubStats.public_repos}
+                </h3>
+                <p className="text-muted-foreground">Public Repositories</p>
+              </Card>
+              <Card className="p-6 text-center shadow-lg dark:shadow-white/40">
+                <h3 className="text-2xl font-bold">
+                  {githubStats.public_gists}
+                </h3>
+                <p className="text-muted-foreground">Public Gists</p>
+              </Card>
+            </section>
+          )}
+
+          {/* Education */}
+          <section>
+            <h2 className="text-3xl font-bold mb-8">Education</h2>
+            <div className="space-y-8">
+              {education.map((edu, index) => (
+                <Card
+                  key={index}
+                  className="p-6 hover:shadow-lg hover:shadow-blue-500 transition-shadow duration-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <GraduationCap className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">{edu.degree}</h3>
+                      <p className="text-muted-foreground">{edu.school}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {edu.year}
+                      </p>
+                      <p className="mt-2">{edu.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          {/* Projects */}
+          <section>
+            <h2 className="text-3xl font-bold mb-8">Featured Projects</h2>
+            <div className="space-y-8">
+              {projects.map((project, index) => (
+                <Card
+                  key={index}
+                  className="p-6 hover:shadow-lg hover:shadow-blue-500 transition-shadow duration-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <Code className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">{project.title}</h3>
+                      <p className="text-muted-foreground">{project.tech}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {project.year}
+                      </p>
+                      <p className="mt-2">{project.description}</p>
+                      <span>
+                        <Link
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block mt-2 text-primary hover:underline"
+                        >
+                          View on GitHub
+                        </Link>
+                        {project.demoLink && (
+                          <Link
+                            href={project.demoLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block ml-4 mt-2 text-primary hover:underline"
+                          >
+                            Demo
+                          </Link>
+                        )}
+                      </span>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

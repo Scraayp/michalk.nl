@@ -64,7 +64,7 @@ export default function Contact() {
   if (loading) return <Loading />;
 
   return (
-    <div className="min-h-screen bg-background pt-24">
+    <div className=" bg-background pt-24 mb-10">
       <div className="container mx-auto px-4">
         <Card className="max-w-2xl mx-auto backdrop-blur-lg bg-background/50 border border-primary/10">
           <div className="p-8">
@@ -81,7 +81,9 @@ export default function Contact() {
                   className="bg-background/50"
                 />
                 {errors.name && (
-                  <p className="text-destructive text-sm mt-1">{errors.name.message}</p>
+                  <p className="text-destructive text-sm mt-1">
+                    {errors.name.message}
+                  </p>
                 )}
               </div>
 
@@ -93,7 +95,9 @@ export default function Contact() {
                   className="bg-background/50"
                 />
                 {errors.email && (
-                  <p className="text-destructive text-sm mt-1">{errors.email.message}</p>
+                  <p className="text-destructive text-sm mt-1">
+                    {errors.email.message}
+                  </p>
                 )}
               </div>
 
@@ -104,7 +108,9 @@ export default function Contact() {
                   className="bg-background/50 min-h-[150px]"
                 />
                 {errors.message && (
-                  <p className="text-destructive text-sm mt-1">{errors.message.message}</p>
+                  <p className="text-destructive text-sm mt-1">
+                    {errors.message.message}
+                  </p>
                 )}
               </div>
 

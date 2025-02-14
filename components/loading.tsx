@@ -23,7 +23,7 @@ export function Loading() {
           className="absolute inset-0 border-t-4 border-primary/30 rounded-full"
           animate={{ rotate: 360 }}
           transition={{
-            duration: 1.5,
+            duration: 0.7,
             repeat: Infinity,
             ease: "linear",
           }}
