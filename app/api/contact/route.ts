@@ -1,18 +1,25 @@
-import { NextResponse } from "next/server";
+// app/api/contact/route.ts
 import nodemailer from "nodemailer";
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
+import Dotenv from "dotenv";
 
-export async function POST(req: Request) {
+Dotenv.config();
+
+export async function POST(request: NextRequest) {
+  const { name, email, message } = await request.json();
+
   try {
-    const { name, email, message } = await req.json();
-
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
+      host: "mail.xstros.xyz",
       port: 587,
       secure: false,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
+      logger: true, // enable logger
+      debug: true, // enable debug output
     });
 
     await transporter.sendMail({
@@ -33,11 +40,11 @@ export async function POST(req: Request) {
       `,
     });
 
-    return NextResponse.json({ message: "Email sent successfully" });
+    return NextResponse.json({ message: "Email sent successfully!" });
   } catch (error) {
     console.error("Failed to send email:", error);
     return NextResponse.json(
-      { error: "Failed to send email" },
+      { message: "Failed to send email" },
       { status: 500 }
     );
   }
