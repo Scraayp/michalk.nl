@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
       secure: false,
       auth: {
         user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        pass: "PeyIP$ca4!7wpAtuZ821",
       },
       logger: true, // enable logger
       debug: true, // enable debug output

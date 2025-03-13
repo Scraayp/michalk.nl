@@ -3,7 +3,15 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useTheme } from "next-themes";
-import { Code, Github, GraduationCap, Linkedin, Mail, X } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  Code,
+  Github,
+  GraduationCap,
+  Linkedin,
+  Mail,
+  X,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -94,6 +102,25 @@ export default function Home() {
         "A NPM module based for DiscordJS to prevent spam in servers.",
       link: "https://github.com/Michael-J-Scofield/discord-anti-spam",
       demoLink: "https://discord-anti-spam.js.org/",
+    },
+  ];
+
+  const organisations = [
+    {
+      name: "Xstros",
+      description:
+        "Xstros is a hosting company that provides web hosting, game hosting, bot hosting and more",
+      link: "https://xstros.xyz",
+      discord: "https://discord.xstros.xyz",
+      year: "2024 - Present",
+    },
+    {
+      name: "FP-Scripts",
+      description:
+        "FP-Scripts is a small company based on FiveM and Discord resources. We provide high quality scripts for FiveM servers and Discord bots.",
+      link: "https://fp-scripts.org",
+      discord: "https://discord.fp-scripts.org",
+      year: "2025 - Present",
     },
   ];
 
@@ -321,6 +348,51 @@ export default function Home() {
                             Demo
                           </Link>
                         )}
+                      </span>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl font-bold mb-8">Organisations</h2>
+            <div className="space-y-8">
+              {organisations.map((organisation, index) => (
+                <Card
+                  key={index}
+                  className="p-6 hover:shadow-lg hover:shadow-blue-500 transition-shadow duration-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <BriefcaseBusiness className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">
+                        {organisation.name}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {organisation.year}
+                      </p>
+                      <p className="mt-2">{organisation.description}</p>
+                      <span>
+                        <Link
+                          href={organisation.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block mt-2 text-primary hover:underline"
+                        >
+                          View
+                        </Link>
+                        <Link
+                          href={organisation.discord}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="ml-5 inline-block mt-2 text-primary hover:underline"
+                        >
+                          Connect
+                        </Link>
                       </span>
                     </div>
                   </div>
