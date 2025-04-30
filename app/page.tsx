@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { useTheme } from "next-themes";
 import {
   BriefcaseBusiness,
+  Building,
   Code,
   Github,
   GraduationCap,
@@ -22,6 +23,15 @@ type GithubStats = {
   public_repos: number;
   public_gists: number;
 };
+
+
+type WorkExperience = {
+  role: string;
+  company: string;
+  year: string;
+  description: string;
+};
+
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -63,6 +73,23 @@ export default function Home() {
       year: "2018-2022",
       description:
         "Specialized in Business Information Management leading up to IT",
+    },
+  ];
+
+  const workExperience: WorkExperience[] = [
+    {
+      role: "Software Developer Intern",
+      company: "Geffenproducts",
+      year: "02-2025 - 06-2025",
+      description:
+        "Assisted in developing a large-scale planning software for a logistics company, focusing on backend development using PHP and Laravel.",
+    },
+    {
+      role: "Frontend Developer Intern",
+      company: "Retrii",
+      year: "08-2023 - 02-2024",
+      description:
+        "Assisted in developing websites for clients, focusing on frontend development using HTML, CSS, and JavaScript.",
     },
   ];
 
@@ -309,6 +336,32 @@ export default function Home() {
             </div>
           </section>
 
+          <section>
+            <h2 className="text-3xl font-bold mb-8">Work Experience</h2>
+            <div className="space-y-8">
+              {workExperience.map((work, index) => (
+                <Card
+                  key={index}
+                  className="p-6 hover:shadow-lg hover:shadow-blue-500 transition-shadow duration-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <BriefcaseBusiness className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">{work.role}</h3>
+                      <p className="text-muted-foreground">{work.company}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {work.year}
+                      </p>
+                      <p className="mt-2">{work.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </section>
+
           {/* Projects */}
           <section>
             <h2 className="text-3xl font-bold mb-8">Featured Projects</h2>
@@ -366,7 +419,7 @@ export default function Home() {
                 >
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-lg">
-                      <BriefcaseBusiness className="h-6 w-6 text-primary" />
+                      <Building className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold">
