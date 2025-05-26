@@ -179,7 +179,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-br from-pink-500 to-purple-600" />
                   {/* SVG Illustration on Top */}
                   <Image
-                    src="/pfp.jpg"
+                    src="/man-pfp.png"
                     alt="Man Illustration"
                     width={384}
                     height={384}
@@ -219,11 +219,6 @@ export default function Home() {
                 web technologies. I love building beautiful, functional, and
                 user-friendly applications. I'm currently studying Software
                 Development, while I work on various projects in my free time.
-                <br />
-                <br />
-                I'm a soccer referee in my free time, I referee games all around
-                Netherlands for the KNVB. I also enjoy playing video games and
-                watching movies.
               </p>
               <div className="flex justify-center gap-4">
                 <Link
